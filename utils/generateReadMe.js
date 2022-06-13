@@ -30,6 +30,10 @@ ${answers.tests}
 ${answers.license}
 
 ## Questions
-${answers.questions}
+${answers.questions}<br />
+GitHub: [${answers.username}](https://githuub.com/${asnwers.username})<br />
+E-Mail:${asnwers.email}
     `;
 }
+
+module.exports = generateReadMe;

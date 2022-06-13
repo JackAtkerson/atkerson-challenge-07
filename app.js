@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const util = require("util");
 const generateReadMe = require("./utils/generateReadMe.js");
+const writeFileAsync = util.promisify(fs.WriteFile);
 
 function promptUser() {
     return inquirer.prompt([
@@ -79,7 +80,7 @@ function promptUser() {
         {
             type: "input",
             name: "questions",
-            message: ""
+            message: "Where can you be reached if a user has questions?"
         }
        
     ]);
